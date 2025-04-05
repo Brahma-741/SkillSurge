@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreen">
+
+    <composable
+        android:id="@+id/homeScreen"
+        android:name="com.skillsurge.screens.HomeScreen"
+        tools:layout="@layout/home_screen">
+        <action
+            android:id="@+id/action_homeScreen_to_courseCreationScreen"
+            app:destination="@id/courseCreationScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_profileEditScreen"
+            app:destination="@id/profileEditScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_chatScreen"
+            app:destination="@id/chatScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_skillerChatScreen"
+            app:destination="@id/skillerChatScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_postScreen"
+            app:destination="@id/postScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/postsScreen"
+        android:name="com.skillsurge.screens.PostScreen"
+        tools:layout="@layout/post_screen">
+        <action
+            android:id="@+id/action_postsScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/chatScreen"
+        android:name="com.skillsurge.screens.ChatScreen"
+        tools:layout="@layout/chat_screen">
+        <action
+            android:id="@+id/action_chatScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/profileScreen"
+        android:name="com.skillsurge.screens.ProfileScreen"
+        tools:layout="@layout/profile_screen">
+        <action
+            android:id="@+id/action_profileScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_privacyPolicyScreen"
+            app:destination="@id/privacyPolicyScreen" />
+        <action
+            android:id="@+id/action_profileScreen_to_aboutUsScreen"
+            app:destination="@id/aboutUsScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/courseCreationScreen"
+        android:name="com.skillsurge.screens.CourseCreationScreen"
+        tools:layout="@layout/course_creation_screen">
+        <action
+            android:id="@+id/action_courseCreationScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/profileEditScreen"
+        android:name="com.skillsurge.screens.ProfileEditScreen"
+        tools:layout="@layout/profile_edit_screen">
+        <action
+            android:id="@+id/action_profileEditScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/skillerChatScreen"
+        android:name="com.skillsurge.screens.SkillerChatScreen"
+        tools:layout="@layout/skiller_chat_screen">
+        <action
+            android:id="@+id/action_skillerChatScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/postScreen"
+        android:name="com.skillsurge.screens.PostScreen"
+        tools:layout="@layout/post_screen">
+        <action
+            android:id="@+id/action_postScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/privacyPolicyScreen"
+        android:name="com.skillsurge.screens.PrivacyPolicyScreen"
+        tools:layout="@layout/privacy_policy_screen">
+        <action
+            android:id="@+id/action_privacyPolicyScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/aboutUsScreen"
+        android:name="com.skillsurge.screens.AboutUsScreen"
+        tools:layout="@layout/about_us_screen">
+        <action
+            android:id="@+id/action_aboutUsScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/loginScreen"
+        android:name="com.skillsurge.screens.LoginScreen"
+        tools:layout="@layout/login_screen">
+        <action
+            android:id="@+id/action_loginScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_signupScreen"
+            app:destination="@id/signupScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/signupScreen"
+        android:name="com.skillsurge.screens.SignupScreen"
+        tools:layout="@layout/signup_screen">
+        <action
+            android:id="@+id/action_signupScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_signupScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </composable>
+
+</navigation>
